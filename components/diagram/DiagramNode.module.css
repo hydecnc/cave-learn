@@ -1,0 +1,8 @@
+.node {
+  cursor: pointer;
+  fill: none;
+}
+.nodeLabel {
+  fill: white;
+  font-weight: 700;
+}
