@@ -1,6 +1,4 @@
-// app/exercise/page.tsx — Exercise page (route: /exercise)
-// Drag-and-drop lesson: place every CA component into its correct layer.
-
+'use client'
 import { ActivityCard } from "@/components/exercise/ActivityCard";
 import { TypeBadge } from "@/components/exercise/TypeBadge";
 
@@ -11,7 +9,7 @@ export default function ExercisePage() {
       className = "content-area"
     >
       <h1 className="text-display">Test Yourself</h1>
-      <p 
+      <p
         style={{ maxWidth: "70%", marginBottom: "var(--space-6)" }}
         className="text-body"
       >
