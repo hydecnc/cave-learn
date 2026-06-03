@@ -70,7 +70,9 @@ export default function ExerciseBoardSidebar({ isPlaced, isVerified, score, hand
                 {CA_COMPONENTS.filter((component) => (isPlaced[component.id] != component.id)).map((component, index) => (index % 2 == 1 && <ComponentPieces key={component.id} layer={component.layer} label={component.id} inDroppable={false} isVerified={isVerified} buttonOutline={""}/>))}
             </div>
         </div>
-        <button className={`btn btn--primary ${styles['retry-button']}`} type="button" onClick={handleRetry}>Retry</button>
+        <div className={styles['retry-button--container']}>
+            <button className={`btn btn--primary ${styles['retry-button']}`} type="button" onClick={handleRetry}>Retry</button>
+        </div>
     </div>
     :
     (<aside className={styles['sidebar--container']}>
