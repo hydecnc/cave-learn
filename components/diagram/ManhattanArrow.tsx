@@ -61,8 +61,6 @@ export default function ManhattanArrow({ start, path, type, rotation }: Manhatta
     foreignY = y - 12; // Adjust for arrow size
   }
 
-  console.log(d);
-
   return (
     <svg 
       width={1000}
