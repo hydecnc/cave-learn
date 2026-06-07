@@ -80,7 +80,7 @@ export default function ExerciseBoardSidebar({ isPlaced, isVerified, score, hand
             <p>PIECES</p>
         </div>
         <div className={styles['description--container']}>
-            <p>Drag each chip into the slot you think it belongs in. Drop chips back here to remove.</p>
+            <p className={styles['description-text']}>Drag each chip into the slot you think it belongs in. Drop chips back here to remove.</p>
         </div>
         <div className={styles['buttons--container']} ref={useDroppable({id : "sidebar-droppable"}).ref}>
             <div className={styles['button--column']}>

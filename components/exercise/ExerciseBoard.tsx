@@ -85,7 +85,7 @@ export default function ExerciseBoard() {
       <ExerciseBoardSubheader />
       <ComponentBoard isFilled={isFilled} isVerified={isVerified}/>
     </Box>
-    <Box sx={{ display: 'flex', flexDirection: 'column', height: '100%', overflow: 'hidden'}}>
+    <Box sx={{ display: 'flex', flexDirection: 'column', height: '100%'}}>
       <ExerciseBoardSidebar isPlaced={isPlaced} isVerified={isVerified} score={score} handleReset={resetBoard} handleRetry={retryBoard} handleCheckWork={checkWork}/>
     </Box>
   </DragDropProvider>

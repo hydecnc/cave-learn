@@ -174,3 +174,7 @@
     gap: 0px 10px;
     margin-bottom: 10px;
 }
+
+.description-text {
+    width: 100%;
+}

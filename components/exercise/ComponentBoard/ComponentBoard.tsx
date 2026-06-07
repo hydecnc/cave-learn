@@ -53,6 +53,7 @@ export default function ComponentBoard( { isFilled, isVerified } : ComponentBoar
           <ComponentPiecesDroppableArea key="database" buttonLayer={isFilled["database"] != "" ? componentToLayer[isFilled["database"]] : ""} buttonLabel={isFilled["database"]} droppableID={"database"} isVerified={isVerified} buttonOutline={"database" == isFilled["database"] ? "button--correct" : "button--incorrect"}/>
         </div>
       </div>
+      <div className={styles['legend-container']}></div>
     </div>
   </div>
   )
