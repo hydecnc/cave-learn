@@ -10,7 +10,7 @@ export const NAV_BAR_HEIGHT = 64
 const NAV_ITEMS = [
   { href: '/', label: 'Home', exact: true as const },
   { href: '/diagram', label: 'Diagram', matchDiagram: true as const },
-  { href: '/exercise', label: 'Test Yourself' },
+  { href: '/testyourself', label: 'Test Yourself' },
 ] as const
 
 function isNavItemActive(
