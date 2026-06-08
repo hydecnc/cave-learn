@@ -6,24 +6,26 @@
 
 import { useState } from 'react'
 import CADiagram from '@/components/diagram/CADiagram'
-import DiagramLegend from '@/components/diagram/DiagramLegend'
 import ComponentSidebar from '@/components/diagram/ComponentSidebar'
-import Paper from '@mui/material/Paper';
-import Grid from '@mui/material/Grid';
+import Paper from '@mui/material/Paper'
+import styles from './page.module.css'
 
 export default function DiagramPage() {
   const [selectedId, setSelectedId] = useState<string | null>(null)
 
   return <main className="page-shell" style={{ display: 'flex' }}>
-      {/* Left side 3 elevation paper, CA Diagram  */}
-      <div style={{ flex: 2, paddingLeft: 'var(--space-6)', paddingRight: 'var(--space-6)' }}>
-        <p className="text-eyebrow" style={{ marginTop: 'var(--space-8)', marginBottom: 'var(--space-2)' }}>DIAGRAM · COMPONENTS & LAYERS</p>
-        <p className='text-h1' style={{ marginBottom: 'var(--space-6)' }}>Click any component to learn what it does.</p>
-        <Paper elevation={4} sx={{ height: '75vh', p: 'var(--space-6)', borderRadius: 'var(--radius-card)', overflow: 'auto' }}>
-          <CADiagram selectedId={selectedId} onSelect={setSelectedId} />
+      {/* Left: diagram + legend */}
+      <div className={styles.leftCol}>
+        <p className={`text-eyebrow ${styles.eyebrow}`}>DIAGRAM · COMPONENTS & LAYERS</p>
+        <p className={`text-h1 ${styles.heading}`}>Click any component to learn what it does.</p>
+        <Paper elevation={4} sx={{ borderRadius: 'var(--radius-card)', overflow: 'auto' }}>
+          <div className={styles.diagramWrap}>
+            <CADiagram selectedId={selectedId} onSelect={setSelectedId} />
+          </div>
+          <div className={styles.legend} />
         </Paper>
       </div>
-      {/* Right side 0 elevation paper, CA component explanations*/}
+      {/* Right: component sidebar */}
       <Paper elevation={0} sx={{ flex: 1, height: 'calc(100vh - var(--navbar-height))', overflow: 'hidden', position: 'sticky', top: 'var(--navbar-height)' }}>
         <ComponentSidebar selectedId={selectedId} />
       </Paper>

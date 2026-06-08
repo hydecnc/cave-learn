@@ -1,6 +1,1 @@
-.nodeGrid {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 12px;
-  padding: 12px;
-}
+/* Nodes are absolutely positioned inside the fixed 894x553 canvas */

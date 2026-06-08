@@ -1,0 +1,26 @@
+.leftCol {
+  flex: 2;
+  padding-left: var(--space-6);
+  padding-right: var(--space-6);
+}
+
+.eyebrow {
+  margin-top: var(--space-8);
+  margin-bottom: var(--space-2);
+}
+
+.heading {
+  margin-bottom: var(--space-6);
+}
+
+.diagramWrap {
+  padding: var(--space-6) var(--space-6) 0;
+}
+
+.legend {
+  height: 100px;
+  background-image: url('/Legend.svg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
