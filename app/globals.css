@@ -35,6 +35,11 @@
   --color-brand-pink:   #E2477C;   /* violation · focus · app-business layer  */
   --color-brand-yellow: #F5C242;   /* warning · in progress · enterprise layer */
 
+  --color-layer-blue-light:   #EBF4FC;   /* frameworks-drivers tint */
+  --color-layer-green-light:  #ECF7F0;   /* interface-adapters tint */
+  --color-layer-pink-light:   #FCEDF3;   /* application-business-rules tint */
+  --color-layer-yellow-light: #FDF8E8;   /* enterprise-business-rules tint */
+
   /* ── Neutral surface tokens — Light theme ──────────────────
      These change in .dark (see below). Always use the var(),
      never the hex directly, so dark mode works automatically.

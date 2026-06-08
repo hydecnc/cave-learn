@@ -3,7 +3,9 @@
 // Renders CA_LAYERS as rectangles and CA_COMPONENTS as clickable boxes.
 // Props: selectedId (string | null), onSelect ((id: string | null) => void)
 
-import { CA_COMPONENTS, CA_LAYERS } from '@/lib/ca-data'
+import { CA_COMPONENTS } from '@/lib/ca-data'
+import { DiagramNode } from './DiagramNode'
+import styles from './CADiagram.module.css'
 
 interface CADiagramProps {
   selectedId: string | null
@@ -11,5 +13,16 @@ interface CADiagramProps {
 }
 
 export default function CADiagram({ selectedId, onSelect }: CADiagramProps) {
-  return <div onClick={() => onSelect(null)}></div>
+  return (
+    <div className={styles.nodeGrid}>
+      {CA_COMPONENTS.map((component) => (
+        <DiagramNode
+          key={component.id}
+          label={component.name}
+          isSelected={selectedId === component.id}
+          onClick={() => onSelect(selectedId === component.id ? null : component.id)}
+        />
+      ))}
+    </div>
+  )
 }

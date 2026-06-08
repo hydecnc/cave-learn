@@ -45,7 +45,7 @@ const categoryToSelectedClassName: Record<NodeCategory, string> = {
   [NodeCategory.FrameworksAndDrivers]: styles.selectedFrameworksAndDrivers,
 };
 
-const NODE_WIDTH = 150;
+const NODE_WIDTH = 160;
 const NODE_HEIGHT = 33;
 const SHADOW_PADDING = 8;
 

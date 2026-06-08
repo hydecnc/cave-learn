@@ -58,9 +58,7 @@
   flex-shrink: 0;
   align-items: center;
   justify-content: center;
-  min-width: 100px;
-  width: 100px;
-  height: 40px;
+  height: 44px;
   padding: 0 var(--space-5);
   border-radius: var(--radius-pill);
   font-size: 15px;
