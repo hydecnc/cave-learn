@@ -35,7 +35,38 @@ export interface CAComponent {
 }
 
 // ── Layers ───────────────────────────────────────────────────
+export const CA_LAYERS: Record<LayerId, CALayer> = {
+  'interface-adapters': {
+    id: 'interface-adapters',
+    name: 'Interface Adapters',
+    colorHex: '#3FAE5C', // brand-green
+    description:
+      'Converts data between the format convenient for use cases and the format convenient for external agencies like databases or the web.',
+  },
+  'application-business-rules': {
+    id: 'application-business-rules',
+    name: 'Application Business Rules',
+    colorHex: '#E2477C', // brand-pink
+    description:
+      'Contains the use cases of the application. Orchestrates the flow of data to and from the entities.',
+  },
+  'enterprise-business-rules': {
+    id: 'enterprise-business-rules',
+    name: 'Enterprise Business Rules',
+    colorHex: '#F5C242', // brand-yellow
+    description:
+      'The innermost layer. Entities encapsulate the most general and high-level business rules of the enterprise.',
+  },
+  'frameworks-drivers': {
+    id: 'frameworks-drivers',
+    name: 'Frameworks & Drivers',
+    colorHex: '#207FD4', // brand-blue
+    description:
+      'The outermost layer. Contains frameworks, tools, databases, and UI. Nothing in this layer should be known by inner layers.',
+  },
+}
 
+// ── Components ───────────────────────────────────────────────
 export const CA_COMPONENTS: CAComponent[] = [
   {
     id: 'view',
