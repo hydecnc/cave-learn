@@ -25,7 +25,7 @@ const titleToCategory: Record<string, NodeCategory> = {
   "data access interface": NodeCategory.ApplicationBusinessRules,
   entities: NodeCategory.EnterpriseBusinessRules,
   view: NodeCategory.FrameworksAndDrivers,
-  "data access": NodeCategory.FrameworksAndDrivers,
+  "data access object": NodeCategory.FrameworksAndDrivers,
   database: NodeCategory.FrameworksAndDrivers,
 };
 
