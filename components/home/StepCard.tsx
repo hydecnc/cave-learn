@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import { asset } from '@/lib/asset'
 import styles from './StepCard.module.css'
 
 interface StepCardProps {
@@ -36,7 +37,7 @@ export default function StepCard({ variant, illustrationSrc, illustrationAlt, ti
           {v.badge}
         </span>
         <div className={styles.illustrationInner}>
-          <img src={illustrationSrc} alt={illustrationAlt} className={styles.illustrationImg} />
+          <img src={asset(illustrationSrc)} alt={illustrationAlt} className={styles.illustrationImg} />
         </div>
       </div>
       <div className={styles.body}>

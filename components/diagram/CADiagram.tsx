@@ -1,6 +1,7 @@
 'use client'
 
 import { CA_COMPONENTS } from '@/lib/ca-data'
+import { asset } from '@/lib/asset'
 import { DiagramNode } from './DiagramNode'
 import ManhattanArrow from './ManhattanArrow'
 
@@ -76,7 +77,7 @@ export default function CADiagram({ selectedId, onSelect }: CADiagramProps) {
       <div style={{ position: 'relative', width: W, height: H, transform: `scale(${SCALE})`, transformOrigin: 'top left' }}>
         {/* SVG background */}
         <img
-          src="/diagrambackground.svg"
+          src={asset('/diagrambackground.svg')}
           alt=""
           style={{ position: 'absolute', top: 0, left: 0, width: W, height: H, pointerEvents: 'none' }}
         />

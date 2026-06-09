@@ -1,9 +1,9 @@
 'use client'
 
-import Image from 'next/image'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import { useState, useRef, useEffect } from 'react'
+import { asset } from '@/lib/asset'
 import styles from './Navbar.module.css'
 
 export const NAV_BAR_HEIGHT = 64
@@ -78,7 +78,7 @@ export default function Navbar() {
   return (
     <nav className={styles.navbar} aria-label="Main navigation">
       <Link href="/" className={styles.logo} aria-label="Home">
-        <Image src="/logo_dark.svg" alt="" width={36} height={36} className={styles.logoImage} priority />
+        <img src={asset('/logo_dark.svg')} alt="" width={36} height={36} className={styles.logoImage} />
         <span className={styles.logoText}>CAVE</span>
         <span className={`badge badge--pink ${styles.learnBadge}`}>LEARN</span>
       </Link>

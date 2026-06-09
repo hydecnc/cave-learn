@@ -1,3 +1,5 @@
+import Link from 'next/link'
+import { asset } from '@/lib/asset'
 import styles from './ActivityCard.module.css'
 import { TypeBadge } from "./TypeBadge";
 
@@ -25,7 +27,7 @@ export const ActivityCard = ({ exercise }: { exercise: string }) => {
     const content = designs[exercise.toUpperCase() as Exercise];
 
     return (
-        <a href={content.link}>
+        <Link href={content.link}>
         <article className={`${styles.activityCard} ${styles.filledCard}`}>
             <div className={styles.cardFrame}>
                 <TypeBadge type={content.type} />
@@ -38,9 +40,9 @@ export const ActivityCard = ({ exercise }: { exercise: string }) => {
             </div>
             <div style={{ backgroundColor: "#DDECF8"}}
             className={`${styles.cardFrame} ${styles.cardImage}`}>
-                <img src={content.graphic} alt={`${content.type} icon`} />
+                <img src={asset(content.graphic)} alt={`${content.type} icon`} />
             </div>
         </article>
-        </a>
+        </Link>
     )
 }
