@@ -1,7 +1,9 @@
 .leftCol {
   flex: 1;
+  min-width: 0;          /* ← lets it shrink below its content size */
   padding-left: var(--space-6);
   padding-right: var(--space-6);
+  overflow: hidden;
 }
 
 .eyebrow {
